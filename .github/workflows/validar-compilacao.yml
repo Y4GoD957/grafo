@@ -70,11 +70,9 @@ jobs:
             echo "❌ Corrija os erros acima e faça um novo commit/push."
             exit 1
           fi
-          
+
           if [ $SUCESSOS -eq 0 ]; then
-            echo "⚠️ Nenhum arquivo .c foi compilado."
-            echo "   Verifique se você criou os arquivos na PASTA correta."
-            exit 1
+            echo "⚠️ Nenhum arquivo .c foi encontrado ainda (repositório vazio/template)."
+          else
+            echo "✅ Todos os arquivos compilaram com sucesso!"
           fi
-          
-          echo "✅ Todos os arquivos compilaram com sucesso!"
